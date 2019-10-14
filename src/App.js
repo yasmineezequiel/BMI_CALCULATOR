@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import DisplayResult from './Components/displayResult';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      weight: '',
+      height: ''
+    }
+  }
+
+  render() {
+    return (
+      <div>
+          <div>
+            <label>Weight(kg)</label>
+            <input name="Weight" value={this.state.weight} onChange={ (e) => this.setState({ weight: e.target.value })} />
+          </div>
+
+          <div>
+            <label>Height(cm)</label>
+            <input name="height" value={this.state.height} onChange={ (e) => this.setState({ height: e.target.value})} />
+          </div>
+
+          <DisplayResult
+            weight={this.state.weight}
+            height={this.state.height}
+          />
+      </div>
+    );
+  }
 }
 
 export default App;
