@@ -14,14 +14,22 @@ class App extends Component {
   render() {
     return (
       <div>
+        <h1>BMI Converter</h1>
           <div>
-            <label>Weight(kg)</label>
-            <input name="Weight" value={this.state.weight} onChange={ (e) => this.setState({ weight: e.target.value })} />
+            <label>weight(kg)</label>
+            <input name="weight" value={this.state.weight} onChange={ (e) => this.setState({ weight: e.target.value })} />
           </div>
 
           <div>
             <label>Height(cm)</label>
             <input name="height" value={this.state.height} onChange={ (e) => this.setState({ height: e.target.value})} />
+          </div>
+          
+          <div>
+            <select id="method">
+              <option value="metric">metric</option>
+              <option value="imperial">Imperial</option>
+            </select>
           </div>
 
           <DisplayResult
