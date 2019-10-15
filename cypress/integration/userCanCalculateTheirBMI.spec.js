@@ -45,4 +45,4 @@ describe('BMI Converter', () => {
           cy.contains('BMI of 26.38')
       })
   })
-}); 
+});
