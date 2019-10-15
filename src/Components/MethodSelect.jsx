@@ -1,7 +1,9 @@
 import React from "react";
+import "../App.css";
 
-const MethodSelect = (props)  => {
+function MethodSelect(props) {
   return (
+    <>
       <div>
       <label>Method</label>
         <select className="method-selector" name="method" id="method" onChange={props.onChangeValue} value={props.method}>
@@ -9,6 +11,7 @@ const MethodSelect = (props)  => {
           <option value="imperial">Imperial</option>
         </select>
       </div>
+    </>
   );
 }
 export default MethodSelect;
