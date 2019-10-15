@@ -21,7 +21,7 @@ class App extends Component {
           </div>
 
           <div>
-            <label>Height(cm)</label>
+            <label>height(cm)</label>
             <input name="height" value={this.state.height} onChange={ (e) => this.setState({ height: e.target.value})} />
           </div>
           
